@@ -32,6 +32,6 @@ with modern TLS, and new parts of our own (a download app, a developer shell, an
 
 ## Licences
 
-Phorepoc's OS code is EPL-1.0 like the Symbian source it builds on; the pdk is Apache-2.0; ported third-party code
+Phorepoc's OS code is EPL-2.0 (with GPL-2.0-or-later as a Secondary License; the Nokia-derived files are relicensed from the Symbian source's EPL-1.0 under its section 7); the pdk is Apache-2.0; ported third-party code
 keeps its own licence (Mesa: MIT, mbedTLS: Apache-2.0, FFmpeg: LGPL). Copyright: The Phorepoc Authors (founded by
 Kyriakos Bompotis). Contributions are welcome -- see each repository's README.
