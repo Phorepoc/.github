@@ -46,6 +46,14 @@ What the layers do:
   Catalogue.
 - [index](https://github.com/Phorepoc/index) is the list of software Catalogue offers.
 - [toolchain](https://github.com/Phorepoc/toolchain) has the Docker images everything is built in.
+- [webengine](https://github.com/Phorepoc/webengine) is the plug-in interface between the browser and its web engines.
+
+Some projects are useful beyond Phorepoc, for any legacy phone or system:
+
+- [cloud-companion](https://github.com/Phorepoc/cloud-companion) is a server you run yourself that brings the modern
+  internet to legacy phones: a cloud browser, a web app for your messages, mail and calendar, and more.
+- [dav-sync](https://github.com/Phorepoc/dav-sync) syncs contacts and calendars with any CalDAV or CardDAV server.
+- [tailscale-symbian](https://github.com/Phorepoc/tailscale-symbian) is a small Tailscale client in plain C99.
 
 If you're curious about the original, [symbian-2010](https://github.com/Phorepoc/symbian-2010) is the 2010 release with
 as few changes as possible, booting in the Symbian QEMU from [qemu-syborg](https://github.com/Phorepoc/qemu-syborg).
