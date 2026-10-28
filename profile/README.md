@@ -21,14 +21,21 @@ own system when you take it out.
 
 ## Where things are
 
-The operating system lives in [core](https://github.com/Phorepoc/core), and [pdk](https://github.com/Phorepoc/pdk) has
-the tools that build it. Each device has its own repositories:
-[adaptation-pc](https://github.com/Phorepoc/adaptation-pc) and
-[adaptation-x86-64](https://github.com/Phorepoc/adaptation-x86-64) for PCs and virtual machines,
-[adaptation-pinephone](https://github.com/Phorepoc/adaptation-pinephone) and
-[adaptation-a64](https://github.com/Phorepoc/adaptation-a64) for the PinePhone.
+Phorepoc is built in layers, and each repository only knows about the ones below it:
 
-Some larger pieces are kept separate:
+| Layer | Repositories |
+|---|---|
+| Boards: one device each | [adaptation-pc](https://github.com/Phorepoc/adaptation-pc), [adaptation-pinephone](https://github.com/Phorepoc/adaptation-pinephone) |
+| Chips: kernel ports and drivers | [adaptation-x86-64](https://github.com/Phorepoc/adaptation-x86-64), [adaptation-a64](https://github.com/Phorepoc/adaptation-a64) |
+| Optional layers | [tls](https://github.com/Phorepoc/tls), [mesa-symbian](https://github.com/Phorepoc/mesa-symbian), [cxxrt](https://github.com/Phorepoc/cxxrt), [webkit-symbian](https://github.com/Phorepoc/webkit-symbian), [codecpack](https://github.com/Phorepoc/codecpack) |
+| The operating system | [core](https://github.com/Phorepoc/core), built for an architecture, never for a device |
+| The tools | [pdk](https://github.com/Phorepoc/pdk) (the `ph` command, the CI pipeline) and [toolchain](https://github.com/Phorepoc/toolchain) (the compilers) |
+
+So bringing Phorepoc to a new device means writing a board repository, plus a chip repository if nobody has done
+that chip yet. You don't change core or the pdk. The pdk's
+[docs/layering.md](https://github.com/Phorepoc/pdk/blob/main/docs/layering.md) explains how.
+
+What the layers do:
 
 - [tls](https://github.com/Phorepoc/tls) gives Symbian TLS 1.2 and 1.3 through mbedTLS. It works on older Symbian phones
   too.
