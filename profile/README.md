@@ -5,8 +5,8 @@ of millions of phones. Then the project was shut down, and that code has sat unt
 
 Phorepoc picks it back up. We build that source with a modern compiler and run it on hardware you can buy today: any
 x86-64 PC or virtual machine, and the PINE64 PinePhone. You get the full Symbian^3 interface with its own apps,
-networking with modern TLS, and a few things we've added along the way, like the Get Apps store, a developer shell and
-OpenGL ES through Mesa.
+networking with modern TLS, and a few things we've added along the way, like the Catalogue (apps, drivers and
+codecs), a developer shell and OpenGL ES through Mesa.
 
 ## Try it
 
@@ -42,9 +42,9 @@ What the layers do:
 - [mesa-symbian](https://github.com/Phorepoc/mesa-symbian) is the Mesa port behind OpenGL ES.
 - [webkit-symbian](https://github.com/Phorepoc/webkit-symbian) and [cxxrt](https://github.com/Phorepoc/cxxrt) are the
   WebKit port and the modern C++ runtime it needs.
-- [codecpack](https://github.com/Phorepoc/codecpack) adds FFmpeg and OpenH264 video support. You install it from Get
-  Apps.
-- [index](https://github.com/Phorepoc/index) is the list of apps Get Apps offers.
+- [codecpack](https://github.com/Phorepoc/codecpack) adds FFmpeg and OpenH264 video support. You install it from the
+  Catalogue.
+- [index](https://github.com/Phorepoc/index) is the list of software the Catalogue offers.
 - [toolchain](https://github.com/Phorepoc/toolchain) has the Docker images everything is built in.
 
 If you're curious about the original, [symbian-2010](https://github.com/Phorepoc/symbian-2010) is the 2010 release with
