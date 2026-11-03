@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="phe-wide.png" width="360" alt="Phorepoc">
+  <img src="phorepoc.png" width="820" alt="Phorepoc">
 </p>
 
 <p align="center"><b>A mobile operating system for hardware you can buy today, with its roots in Symbian.</b></p>
