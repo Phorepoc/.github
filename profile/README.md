@@ -60,7 +60,7 @@ and services like the Cloud Companion.
 
 <table>
   <tr>
-    <td><img src="img/catalogue-app.png" width="220" alt="Catalogue on the phone: categories such as Browser engines, Codecs, Developer and Graphics"></td>
+    <td><img src="img/catalogue-app.png" width="220" alt="Catalogue on the phone: the welcome banner, Free and Open Source Symbian Software"></td>
     <td><img src="img/catalogue-web-desktop.png" width="560" alt="The Catalogue website: download Catalogue, browse apps by category"></td>
   </tr>
   <tr>
