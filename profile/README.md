@@ -31,12 +31,12 @@ and services like the Cloud Companion.
 
 <table>
   <tr>
-    <td><img src="img/pc-home.png" width="400" alt="The home screen on a PC: clock, date and profile"></td>
     <td><img src="img/about.png" width="400" alt="The About screen: Phorepoc is a free and open-source operating system built from the Symbian platform"></td>
+    <td><img src="img/music-player.png" width="400" alt="The Music player library"></td>
   </tr>
   <tr>
-    <td align="center"><sub>The home screen in VirtualBox.</sub></td>
     <td align="center"><sub>About.</sub></td>
+    <td align="center"><sub>Music player.</sub></td>
   </tr>
 </table>
 
@@ -60,14 +60,20 @@ and services like the Cloud Companion.
 
 <table>
   <tr>
-    <td><img src="img/pc-applications.png" width="260" alt="The Applications grid: Browser, Catalogue, Terminal, FM Radio and more"></td>
-    <td><img src="img/browser.png" width="260" alt="The browser menu: new tab, private tab, theme, search engine, get a browser engine"></td>
-    <td><img src="img/music-player.png" width="260" alt="The Music player library"></td>
+    <td><img src="img/catalogue-app.png" width="220" alt="Catalogue on the phone: categories such as Browser engines, Codecs, Developer and Graphics"></td>
+    <td><img src="img/catalogue-web-desktop.png" width="560" alt="The Catalogue website: download Catalogue, browse apps by category"></td>
   </tr>
   <tr>
-    <td align="center"><sub>Applications.</sub></td>
-    <td align="center"><sub>The browser, before an engine is installed.</sub></td>
-    <td align="center"><sub>Music player.</sub></td>
+    <td align="center"><sub>Catalogue on the phone.</sub></td>
+    <td align="center"><sub>The <a href="https://phorepoc.github.io/index/">Catalogue website</a>.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="img/catalogue-web-phone.png" width="220" alt="The Catalogue website on a phone"></td>
+    <td><img src="img/catalogue-web-listing.png" width="560" alt="A Catalogue listing: the WebKit web engine, its ARM and x32 files with their SHA-256"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>The website on a phone.</sub></td>
+    <td align="center"><sub>A listing, with each file's SHA-256.</sub></td>
   </tr>
 </table>
 
@@ -85,20 +91,6 @@ Phorepoc OS starts with the Symbian^3 interface. Other shells install from Catal
 - [**orbit-ui**](https://github.com/Phorepoc/orbit-ui) [![release](https://img.shields.io/github/v/release/Phorepoc/orbit-ui?label=)](https://github.com/Phorepoc/orbit-ui/releases/latest): Orbit, the Hb interface and Qt home screen of Symbian^4, published in 2010 and never shipped on a phone. On the PC edition for now.
 - [**clutter-symbian**](https://github.com/Phorepoc/clutter-symbian): Clutter and Cogl on OpenGL ES. The libraries build and a test program draws a Clutter stage; not released yet.
 
-Apps can also run side by side as tiles, with the compositor in core.
-
-<table>
-  <tr>
-    <td><img src="img/hildon-home.png" width="200" alt="The Hildon home screen with a date widget"></td>
-    <td><img src="img/hildon-about-device.png" width="200" alt="Hildon settings: About device"></td>
-    <td><img src="img/compositor-tiles.png" width="400" alt="Calculator and Notes as tiles over the Applications grid"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Hildon home.</sub></td>
-    <td align="center"><sub>Hildon settings.</sub></td>
-    <td align="center"><sub>Calculator and Notes as tiles.</sub></td>
-  </tr>
-</table>
 
 ## The developer kit
 
@@ -108,6 +100,11 @@ Apps can also run side by side as tiles, with the compositor in core.
 ## Beyond Phorepoc
 
 - [**Cloud Companion**](https://github.com/Phorepoc/cloud-companion) [![release](https://img.shields.io/github/v/release/Phorepoc/cloud-companion?label=)](https://github.com/Phorepoc/cloud-companion/releases/latest): a server you run yourself that brings the modern internet to legacy phones: a cloud browser, your mail, messages and calendar.
+<p align="center">
+  <img src="img/cloud-companion.png" width="760" alt="Cloud Companion in a browser: text messages synced from a phone next to the cloud browser">
+  <br><sub>Cloud Companion: messages from your phones and the cloud browser.</sub>
+</p>
+
 - [**dav-sync**](https://github.com/Phorepoc/dav-sync): syncs contacts and calendars with any CalDAV or CardDAV server, in small C99.
 - [**tailscale-symbian**](https://github.com/Phorepoc/tailscale-symbian): a small Tailscale client in plain C99. An early prototype.
 
