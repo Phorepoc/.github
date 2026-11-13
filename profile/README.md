@@ -101,8 +101,8 @@ Phorepoc OS starts with the Symbian^3 interface. Other shells install from Catal
 
 - [**Cloud Companion**](https://github.com/Phorepoc/cloud-companion) [![release](https://img.shields.io/github/v/release/Phorepoc/cloud-companion?label=)](https://github.com/Phorepoc/cloud-companion/releases/latest): a server you run yourself that brings the modern internet to legacy phones: a cloud browser, your mail, messages and calendar.
 <p align="center">
-  <img src="img/cloud-companion.png" width="760" alt="Cloud Companion in a browser: text messages synced from a phone next to the cloud browser">
-  <br><sub>Cloud Companion: messages from your phones and the cloud browser.</sub>
+  <img src="img/cloud-companion.png" width="760" alt="The Cloud Companion web desktop: a Chats window with a text conversation in front, partly over the cloud browser showing the Wikipedia article on Symbian and a Files window, with the dock on the left">
+  <br><sub>Cloud Companion: a desktop in your browser, with your messages, files and the cloud browser in overlapping windows.</sub>
 </p>
 
 - [**dav-sync**](https://github.com/Phorepoc/dav-sync): syncs contacts and calendars with any CalDAV or CardDAV server, in small C99.
