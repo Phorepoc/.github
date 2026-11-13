@@ -29,12 +29,87 @@ and services like the Cloud Companion.
   <br><sub>Phorepoc OS on a PinePhone, in the built-in Haze theme.</sub>
 </p>
 
-| Project | What it is |
-|---|---|
-| [**Phorepoc OS for PCs**](https://github.com/Phorepoc/adaptation-pc) | A VirtualBox appliance and a bootable ISO for QEMU and real PCs. The easiest way to try it. |
-| [**Phorepoc OS for the PinePhone**](https://github.com/Phorepoc/adaptation-pinephone) | A microSD card image: boot Phorepoc OS on the phone, take the card out and its own system is back. |
-| [**PDK and PhoneLab**](https://github.com/Phorepoc/pdk) | `phe` builds Phorepoc OS from source; PhoneLab puts a running phone's screen, files and log in your browser, for people and AI agents alike. |
-| [**Cloud Companion**](https://github.com/Phorepoc/cloud-companion) | A server you run yourself that brings the modern internet to legacy phones: a cloud browser, your mail, messages and calendar. |
+<table>
+  <tr>
+    <td><img src="img/pc-home.png" width="400" alt="The home screen on a PC: clock, date and profile"></td>
+    <td><img src="img/about.png" width="400" alt="The About screen: Phorepoc is a free and open-source operating system built from the Symbian platform"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>The home screen in VirtualBox.</sub></td>
+    <td align="center"><sub>About.</sub></td>
+  </tr>
+</table>
+
+## The operating system and devices
+
+- [**Phorepoc OS for PCs**](https://github.com/Phorepoc/adaptation-pc) [![release](https://img.shields.io/github/v/release/Phorepoc/adaptation-pc?label=)](https://github.com/Phorepoc/adaptation-pc/releases/latest): a VirtualBox appliance and a bootable ISO for QEMU and real PCs. The easiest way to try it.
+- [**Phorepoc OS for the PinePhone**](https://github.com/Phorepoc/adaptation-pinephone) [![release](https://img.shields.io/github/v/release/Phorepoc/adaptation-pinephone?label=)](https://github.com/Phorepoc/adaptation-pinephone/releases/latest): a microSD card image. Boot Phorepoc OS on the phone, take the card out and its own system is back.
+- [**core**](https://github.com/Phorepoc/core): everything that is the same on every device, built for an architecture, never for a device.
+- [**adaptation-x86-64**](https://github.com/Phorepoc/adaptation-x86-64) and [**adaptation-a64**](https://github.com/Phorepoc/adaptation-a64): the kernel on x86-64 (64-bit CPU, 32-bit pointers, SMP) and the Allwinner A64 drivers shared by every A64 board.
+- [**tls**](https://github.com/Phorepoc/tls): TLS 1.2 and 1.3 through mbedTLS, built into Phorepoc OS and usable as a drop-in on older Symbian phones.
+- [**mesa-symbian**](https://github.com/Phorepoc/mesa-symbian): OpenGL ES 1.1/2.0 and EGL through Mesa, in software on any board or on the Mali-400 GPU of the A64.
+
+## Catalogue and apps
+
+- [**Catalogue**](https://github.com/Phorepoc/catalogue) [![release](https://img.shields.io/github/v/release/Phorepoc/catalogue?label=)](https://github.com/Phorepoc/catalogue/releases/latest): the software store. It reads the index, shows what's there by category with search, checks each download's SHA-256 and installs it. Drivers, codecs, web engines and apps get onto a device this way, not by being built into the image.
+- [**index**](https://github.com/Phorepoc/index): the list of software Catalogue offers. Add yours with a pull request.
+- [**webengine**](https://github.com/Phorepoc/webengine): the plug-in interface between the browser and its web engines. The browser draws pages with whichever engine you install from Catalogue:
+  - [**webkit-symbian**](https://github.com/Phorepoc/webkit-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/webkit-symbian?label=)](https://github.com/Phorepoc/webkit-symbian/releases/latest): WPE WebKit 2.54 with JavaScriptCore, behind the browser-control API apps have used since 2010.
+  - [**netsurf-symbian**](https://github.com/Phorepoc/netsurf-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/netsurf-symbian?label=)](https://github.com/Phorepoc/netsurf-symbian/releases/latest): NetSurf, a small, fast engine with https and JavaScript (QuickJS-ng), for devices with little memory.
+- [**codecpack**](https://github.com/Phorepoc/codecpack) [![release](https://img.shields.io/github/v/release/Phorepoc/codecpack?label=)](https://github.com/Phorepoc/codecpack/releases/latest): FFmpeg and OpenH264 video and AAC support, installed from Catalogue.
+
+<table>
+  <tr>
+    <td><img src="img/pc-applications.png" width="260" alt="The Applications grid: Browser, Catalogue, Terminal, FM Radio and more"></td>
+    <td><img src="img/browser.png" width="260" alt="The browser menu: new tab, private tab, theme, search engine, get a browser engine"></td>
+    <td><img src="img/music-player.png" width="260" alt="The Music player library"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Applications.</sub></td>
+    <td align="center"><sub>The browser, before an engine is installed.</sub></td>
+    <td align="center"><sub>Music player.</sub></td>
+  </tr>
+</table>
+
+## Compatibility
+
+- [**Proteus**](https://github.com/Phorepoc/proteus) [![release](https://img.shields.io/github/v/release/Phorepoc/proteus?label=)](https://github.com/Phorepoc/proteus/releases/latest): runs ARM Symbian programs on the PC edition. An app installed from an ARM SIS starts like any other; Proteus runs its ARM code in user space, with the program's own SecureId and capabilities.
+- [**qt-symbian**](https://github.com/Phorepoc/qt-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/qt-symbian?label=)](https://github.com/Phorepoc/qt-symbian/releases/latest): Qt 4.8.7, so Qt apps made for Symbian^3 keep running. A Catalogue package, never part of an image.
+- [**cxxrt**](https://github.com/Phorepoc/cxxrt): the modern C++ runtime (libstdc++, C++17/20) and the POSIX functions ported libraries need.
+
+## Interfaces
+
+Phorepoc OS starts with the Symbian^3 interface. Other shells install from Catalogue and are chosen in Settings, Device, UI shell.
+
+- [**hildon-ui**](https://github.com/Phorepoc/hildon-ui) [![release](https://img.shields.io/github/v/release/Phorepoc/hildon-ui?label=)](https://github.com/Phorepoc/hildon-ui/releases/latest): the Maemo / Leste Hildon widgets and home and status plug-ins, on [**gtk-symbian**](https://github.com/Phorepoc/gtk-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/gtk-symbian?label=)](https://github.com/Phorepoc/gtk-symbian/releases/latest) (GTK 2), [**glib-symbian**](https://github.com/Phorepoc/glib-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/glib-symbian?label=)](https://github.com/Phorepoc/glib-symbian/releases/latest) and [**dbus-symbian**](https://github.com/Phorepoc/dbus-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/dbus-symbian?label=)](https://github.com/Phorepoc/dbus-symbian/releases/latest), with the [**hildon-theme-alpha**](https://github.com/Phorepoc/hildon-theme-alpha) [![release](https://img.shields.io/github/v/release/Phorepoc/hildon-theme-alpha?label=)](https://github.com/Phorepoc/hildon-theme-alpha/releases/latest) theme.
+- [**orbit-ui**](https://github.com/Phorepoc/orbit-ui) [![release](https://img.shields.io/github/v/release/Phorepoc/orbit-ui?label=)](https://github.com/Phorepoc/orbit-ui/releases/latest): Orbit, the Hb interface and Qt home screen of Symbian^4, published in 2010 and never shipped on a phone. On the PC edition for now.
+- [**clutter-symbian**](https://github.com/Phorepoc/clutter-symbian): Clutter and Cogl on OpenGL ES. The libraries build and a test program draws a Clutter stage; not released yet.
+
+Apps can also run side by side as tiles, with the compositor in core.
+
+<table>
+  <tr>
+    <td><img src="img/hildon-home.png" width="200" alt="The Hildon home screen with a date widget"></td>
+    <td><img src="img/hildon-about-device.png" width="200" alt="Hildon settings: About device"></td>
+    <td><img src="img/compositor-tiles.png" width="400" alt="Calculator and Notes as tiles over the Applications grid"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Hildon home.</sub></td>
+    <td align="center"><sub>Hildon settings.</sub></td>
+    <td align="center"><sub>Calculator and Notes as tiles.</sub></td>
+  </tr>
+</table>
+
+## The developer kit
+
+- [**pdk**](https://github.com/Phorepoc/pdk) [![release](https://img.shields.io/github/v/release/Phorepoc/pdk?label=)](https://github.com/Phorepoc/pdk/releases/latest): `phe` builds Phorepoc OS from source (components, resources, ROMs, skins, icons, SIS packages), and PhoneLab puts a running phone's screen, files and log in your browser.
+- [**toolchain**](https://github.com/Phorepoc/toolchain): the Linux build images: GCC x32, Arm GNU 14.2 and the Symbian host tools built from the 2010 source.
+
+## Beyond Phorepoc
+
+- [**Cloud Companion**](https://github.com/Phorepoc/cloud-companion) [![release](https://img.shields.io/github/v/release/Phorepoc/cloud-companion?label=)](https://github.com/Phorepoc/cloud-companion/releases/latest): a server you run yourself that brings the modern internet to legacy phones: a cloud browser, your mail, messages and calendar.
+- [**dav-sync**](https://github.com/Phorepoc/dav-sync): syncs contacts and calendars with any CalDAV or CardDAV server, in small C99.
+- [**tailscale-symbian**](https://github.com/Phorepoc/tailscale-symbian): a small Tailscale client in plain C99. An early prototype.
 
 ## PhoneLab
 
@@ -73,26 +148,6 @@ Phorepoc OS is built in layers, and each repository only knows about the ones be
 So bringing Phorepoc OS to a new device means writing a board repository, plus a chip repository if nobody has done
 that chip yet. You don't change core or the pdk. The pdk's
 [docs/layering.md](https://github.com/Phorepoc/pdk/blob/main/docs/layering.md) explains how.
-
-What the layers do:
-
-- [tls](https://github.com/Phorepoc/tls) gives Phorepoc OS TLS 1.2 and 1.3 through mbedTLS. It works on older Symbian phones
-  too.
-- [mesa-symbian](https://github.com/Phorepoc/mesa-symbian) is the Mesa port behind OpenGL ES.
-- [webkit-symbian](https://github.com/Phorepoc/webkit-symbian) and [cxxrt](https://github.com/Phorepoc/cxxrt) are the
-  WebKit port and the modern C++ runtime it needs.
-- [codecpack](https://github.com/Phorepoc/codecpack) adds FFmpeg and OpenH264 video support. You install it from
-  Catalogue.
-- [index](https://github.com/Phorepoc/index) is the list of software Catalogue offers.
-- [toolchain](https://github.com/Phorepoc/toolchain) has the Docker images everything is built in.
-- [webengine](https://github.com/Phorepoc/webengine) is the plug-in interface between the browser and its web engines.
-
-Some projects are useful beyond Phorepoc, for any legacy phone or system:
-
-- [cloud-companion](https://github.com/Phorepoc/cloud-companion) is a server you run yourself that brings the modern
-  internet to legacy phones.
-- [dav-sync](https://github.com/Phorepoc/dav-sync) syncs contacts and calendars with any CalDAV or CardDAV server.
-- [tailscale-symbian](https://github.com/Phorepoc/tailscale-symbian) is a small Tailscale client in plain C99.
 
 If you're curious about where it all started, [symbian-2010](https://github.com/Phorepoc/symbian-2010) is the 2010 release with
 as few changes as possible, booting in the Symbian QEMU from [qemu-syborg](https://github.com/Phorepoc/qemu-syborg).
