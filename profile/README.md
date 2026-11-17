@@ -45,7 +45,7 @@ and services like the Cloud Companion.
 - [**Phorepoc OS for PCs**](https://github.com/Phorepoc/adaptation-pc) [![release](https://img.shields.io/github/v/release/Phorepoc/adaptation-pc?label=)](https://github.com/Phorepoc/adaptation-pc/releases/latest): a VirtualBox appliance and a bootable ISO for QEMU and real PCs. The easiest way to try it.
 - [**Phorepoc OS for the PinePhone**](https://github.com/Phorepoc/adaptation-pinephone) [![release](https://img.shields.io/github/v/release/Phorepoc/adaptation-pinephone?label=)](https://github.com/Phorepoc/adaptation-pinephone/releases/latest): a microSD card image. Boot Phorepoc OS on the phone, take the card out and its own system is back.
 - [**core**](https://github.com/Phorepoc/core): everything that is the same on every device, built for an architecture, never for a device.
-- [**adaptation-x86-64**](https://github.com/Phorepoc/adaptation-x86-64) and [**adaptation-a64**](https://github.com/Phorepoc/adaptation-a64): the kernel on x86-64 (64-bit CPU, 32-bit pointers, SMP) and the Allwinner A64 drivers shared by every A64 board.
+- [**adaptation-x32**](https://github.com/Phorepoc/adaptation-x32) and [**adaptation-a64**](https://github.com/Phorepoc/adaptation-a64): the kernel on x86-64 (64-bit CPU, 32-bit pointers, SMP) and the Allwinner A64 drivers shared by every A64 board.
 - [**tls**](https://github.com/Phorepoc/tls): TLS 1.2 and 1.3 through mbedTLS, built into Phorepoc OS and usable as a drop-in on older Symbian phones.
 - [**mesa-symbian**](https://github.com/Phorepoc/mesa-symbian): OpenGL ES 1.1/2.0 and EGL through Mesa, in software on any board or on the Mali-400 GPU of the A64.
 
@@ -137,7 +137,7 @@ Phorepoc OS is built in layers, and each repository only knows about the ones be
 | Layer | Repositories |
 |---|---|
 | Boards: one device each | [adaptation-pc](https://github.com/Phorepoc/adaptation-pc), [adaptation-pinephone](https://github.com/Phorepoc/adaptation-pinephone) |
-| Chips: kernel ports and drivers | [adaptation-x86-64](https://github.com/Phorepoc/adaptation-x86-64), [adaptation-a64](https://github.com/Phorepoc/adaptation-a64) |
+| Chips: kernel ports and drivers | [adaptation-x32](https://github.com/Phorepoc/adaptation-x32), [adaptation-a64](https://github.com/Phorepoc/adaptation-a64) |
 | Optional layers | [tls](https://github.com/Phorepoc/tls), [mesa-symbian](https://github.com/Phorepoc/mesa-symbian), [cxxrt](https://github.com/Phorepoc/cxxrt), [webkit-symbian](https://github.com/Phorepoc/webkit-symbian), [codecpack](https://github.com/Phorepoc/codecpack) |
 | The operating system | [core](https://github.com/Phorepoc/core), built for an architecture, never for a device |
 | The tools | [pdk](https://github.com/Phorepoc/pdk) (the `phe` command, PhoneLab, the CI pipeline) and [toolchain](https://github.com/Phorepoc/toolchain) (the compilers) |
