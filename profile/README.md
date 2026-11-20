@@ -81,6 +81,38 @@ and services like the Cloud Companion.
   </tr>
 </table>
 
+## Games on the PinePhone
+
+Title screens and menus of commercial Symbian^3 games running natively on the PinePhone, 3D through OpenGL ES.
+The phone's status bar and keys are in each shot, turned to landscape.
+
+<table>
+  <tr>
+    <td><img src="shots/games/dungeonhunter2-2.jpg" width="380" alt="Dungeon Hunter 2 title screen on the PinePhone"></td>
+    <td><img src="shots/games/dungeonhunter2-3.jpg" width="380" alt="Dungeon Hunter 2 3D main menu on the PinePhone"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Dungeon Hunter 2, title screen.</sub></td>
+    <td align="center"><sub>Dungeon Hunter 2, the 3D menu.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="shots/games/gtracing-2.jpg" width="380" alt="GT Racing: Motor Academy title screen on the PinePhone"></td>
+    <td><img src="shots/games/fruitninja-1.jpg" width="380" alt="Fruit Ninja menu on the PinePhone"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>GT Racing: Motor Academy, title screen.</sub></td>
+    <td align="center"><sub>Fruit Ninja, menu.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="shots/games/bigroll-3.jpg" width="380" alt="The Big Roll in Paradise title screen with 3D balls on the PinePhone"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>The Big Roll in Paradise, title screen, through the <a href="https://github.com/Phorepoc/phecompat">phecompat</a> compatibility profiles.</sub></td>
+    <td></td>
+  </tr>
+</table>
+
 ## Compatibility
 
 - [**Proteus**](https://github.com/Phorepoc/proteus) [![release](https://img.shields.io/github/v/release/Phorepoc/proteus?label=)](https://github.com/Phorepoc/proteus/releases/latest): like Rosetta, but for Symbian. It translates existing Symbian software built for ARM, apps and games alike, so it runs on the x86-64 PC edition. An app installed from an ARM SIS starts like any other; Proteus runs its ARM code in user space, with the program's own SecureId and capabilities.
