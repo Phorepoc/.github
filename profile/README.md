@@ -83,7 +83,7 @@ and services like the Cloud Companion.
 
 ## Compatibility
 
-- [**Proteus**](https://github.com/Phorepoc/proteus) [![release](https://img.shields.io/github/v/release/Phorepoc/proteus?label=)](https://github.com/Phorepoc/proteus/releases/latest): runs ARM Symbian programs on the PC edition. An app installed from an ARM SIS starts like any other; Proteus runs its ARM code in user space, with the program's own SecureId and capabilities.
+- [**Proteus**](https://github.com/Phorepoc/proteus) [![release](https://img.shields.io/github/v/release/Phorepoc/proteus?label=)](https://github.com/Phorepoc/proteus/releases/latest): like Rosetta, but for Symbian. It translates existing Symbian software built for ARM, apps and games alike, so it runs on the x86-64 PC edition. An app installed from an ARM SIS starts like any other; Proteus runs its ARM code in user space, with the program's own SecureId and capabilities.
 - [**qt-symbian**](https://github.com/Phorepoc/qt-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/qt-symbian?label=)](https://github.com/Phorepoc/qt-symbian/releases/latest): Qt 4.8.7, so Qt apps made for Symbian^3 keep running. A Catalogue package, never part of an image.
 - [**cxxrt**](https://github.com/Phorepoc/cxxrt): the modern C++ runtime (libstdc++, C++17/20) and the POSIX functions ported libraries need.
 
