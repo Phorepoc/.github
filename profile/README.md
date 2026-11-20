@@ -22,8 +22,8 @@ GPU through Mesa. It runs apps made for Symbian^3, and it keeps going where Symb
 and codecs, a developer shell, a modern web engine.
 
 Phorepoc does two things at once. It **preserves** Symbian: the 2010 source builds again, and apps made for Symbian^3
-keep running. And it **evolves** it: new interfaces, modern software (TLS 1.3, current web engines, OpenGL ES, Qt and
-GTK ports), new hardware, and an app store, added in a way that keeps those older apps working.
+keep running. And it **evolves** it: new interfaces, ports of modern open-source software (mbedTLS, WebKit, NetSurf, Mesa, Qt,
+GTK), new hardware, and an app store, added in a way that keeps those older apps working.
 
 Phorepoc is the whole project around it: the operating system, the tools to build and debug it (the pdk and PhoneLab),
 and services like the Cloud Companion.
@@ -91,7 +91,7 @@ and services like the Cloud Companion.
 
 Phorepoc OS starts with the Symbian^3 interface. Other shells install from Catalogue and are chosen in Settings, Device, UI shell.
 
-- [**etesian-ui**](https://github.com/Phorepoc/etesian-ui): Etesian, a new home screen, app grid and open-apps view in a design language inspired by the N9, for the Symbian^3 UI.
+- [**etesian-ui**](https://github.com/Phorepoc/etesian-ui): a home screen, app grid and open-apps view for the Symbian^3 UI, styled in the Etesian design language (the N9's look, re-envisioned).
 - [**hildon-ui**](https://github.com/Phorepoc/hildon-ui) [![release](https://img.shields.io/github/v/release/Phorepoc/hildon-ui?label=)](https://github.com/Phorepoc/hildon-ui/releases/latest): the Maemo / Leste Hildon widgets and home and status plug-ins, on [**gtk-symbian**](https://github.com/Phorepoc/gtk-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/gtk-symbian?label=)](https://github.com/Phorepoc/gtk-symbian/releases/latest) (GTK 2), [**glib-symbian**](https://github.com/Phorepoc/glib-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/glib-symbian?label=)](https://github.com/Phorepoc/glib-symbian/releases/latest) and [**dbus-symbian**](https://github.com/Phorepoc/dbus-symbian) [![release](https://img.shields.io/github/v/release/Phorepoc/dbus-symbian?label=)](https://github.com/Phorepoc/dbus-symbian/releases/latest), with the [**hildon-theme-alpha**](https://github.com/Phorepoc/hildon-theme-alpha) [![release](https://img.shields.io/github/v/release/Phorepoc/hildon-theme-alpha?label=)](https://github.com/Phorepoc/hildon-theme-alpha/releases/latest) theme.
 - [**orbit-ui**](https://github.com/Phorepoc/orbit-ui) [![release](https://img.shields.io/github/v/release/Phorepoc/orbit-ui?label=)](https://github.com/Phorepoc/orbit-ui/releases/latest): Orbit, the Hb interface and Qt home screen of Symbian^4, published in 2010 and never shipped on a phone. On the PC edition for now.
 - [**clutter-symbian**](https://github.com/Phorepoc/clutter-symbian): Clutter and Cogl on OpenGL ES. The libraries build and a test program draws a Clutter stage; not released yet.
@@ -146,11 +146,11 @@ works with stock Nokia Symbian phones as well. See the [pdk](https://github.com/
 
 These are plans, not features yet:
 
-- **Native resolution.** Run at the display's real size (720x1440 on the PinePhone) instead of doubling every pixel,
-  with a compatibility mode that keeps S60 apps at the size they were made for.
-- **Sharper layouts.** Layout packs for high-density screens, so the Symbian^3 interface is drawn at full resolution.
-- **Resizable windows on the PC.** Changing the resolution at run time, with S60 apps in framed windows.
-- **Wider compatibility.** Proteus and Qt keep growing so more existing Symbian software runs unchanged.
+- **Any screen size.** Make the existing Symbian^3 UI stack resolution-independent, so it runs at the display's real
+  size (720x1440 on the PinePhone) instead of a 360x640 screen with every pixel doubled. S60 apps that assume a fixed
+  screen keep working in a scaled compatibility mode.
+- **Screen size changing at run time on the PC.** When the VM window is resized, the window server and its apps lay
+  themselves out again, and S60 apps can be shown as fixed-size windows on the larger screen.
 
 ## Try it
 
