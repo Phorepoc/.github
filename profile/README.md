@@ -130,14 +130,6 @@ Phorepoc OS starts with the Symbian^3 interface. Other shells install from Catal
 
 <table>
   <tr>
-    <td><img src="shots/etesian-home.png" width="240" alt="The Etesian home screen: an app grid with About, Browser, Calculator, Catalogue and more"></td>
-    <td><img src="shots/etesian-open-apps.png" width="240" alt="Etesian's open-apps view with a live preview card of Calculator"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>The Etesian app grid.</sub></td>
-    <td align="center"><sub>Etesian's open apps, with a live preview.</sub></td>
-  </tr>
-  <tr>
     <td><img src="shots/applications.png" width="380" alt="The Symbian^3 Applications folder in landscape: Camera, Terminal, FM Radio, Browser, Catalogue, Photo Browser"></td>
     <td><img src="shots/terminal.png" width="380" alt="The Terminal app running the Symbian shell"></td>
   </tr>
