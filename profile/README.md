@@ -16,7 +16,7 @@
 hundreds of millions of phones. In 2010 Nokia and the Symbian Foundation released Symbian's source code and then shut
 the project down, and that code sat untouched for years.
 
-We started from that source, and build it with a modern compiler. Phorepoc OS runs on any x86-64 PC or virtual machine
+Phorepoc starts from that source and builds it with a modern compiler. Phorepoc OS runs on any x86-64 PC or virtual machine
 and on the PINE64 PinePhone, with the Symbian^3 interface and its apps, networking with modern TLS, and OpenGL ES on the
 GPU through Mesa. It runs apps made for Symbian^3, and it keeps going where Symbian stopped: Catalogue for apps, drivers
 and codecs, a developer shell, a modern web engine.
@@ -183,7 +183,7 @@ The easiest way is VirtualBox. Download the `.ova` file from the
 **File > Import Appliance**.
 
 If you have a PinePhone, download `phorepoc-pinephone-sdcard.img.xz` from the
-[latest PinePhone release](https://github.com/Phorepoc/adaptation-pinephone/releases/latest) and write it to a microSD
+[latest PinePhone release](https://github.com/Phorepoc/adaptation-pinephone/releases/latest) and flash it to a microSD
 card with [balenaEtcher](https://etcher.balena.io).
 
 <details>
@@ -211,9 +211,12 @@ The `oss.*` repositories are untouched mirrors of the 2010 source packages.
 
 ## Licences and contributing
 
-Code we wrote is Apache-2.0. Symbian files we've changed are EPL-2.0, with GPL-2.0-or-later as a Secondary License, and
-Symbian files we use unchanged stay EPL-1.0. Ported projects keep their own licences: Mesa is MIT, mbedTLS is
-Apache-2.0 and FFmpeg is LGPL.
+Phorepoc's own apps, services and tools are licensed under AGPL-3.0-only, with commercial licences available
+separately; the SDK tools and runtime add the Phorepoc Build Output Exception 1.0, so applications built with them are
+not covered by the AGPL. Within the Symbian-derived repositories (core, the adaptations, codecpack), Phorepoc-authored
+and modified Symbian files are licensed under EPL-2.0 with GPL-2.0-or-later as a Secondary License; unmodified Symbian
+files remain under EPL-1.0. Ported projects retain their original licences: Mesa is MIT, mbedTLS is Apache-2.0 and
+FFmpeg is LGPL.
 
 Phorepoc was started by Kyriakos Bompotis. Contributions are very welcome, and each repository's README explains how to
 get going.
